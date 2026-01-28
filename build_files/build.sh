@@ -13,8 +13,8 @@ set -ouex pipefail
 dnf5 install -y tmux
 
 # tailscale install
-dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-dnf install tailscale
+dnf5 config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+dnf5 install -y tailscale
 systemctl enable tailscaled
 
 # Use a COPR Example:
